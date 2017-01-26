@@ -1,3 +1,12 @@
+
+
+
+
+
+#now the rgb values are working
+#help(flycapture2) , dirs(flycapture2) or obj inside instead, vars(obj)
+
+
 import cv2
 import numpy as np
 import flycapture2 as fc2
