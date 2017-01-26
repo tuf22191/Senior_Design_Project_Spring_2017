@@ -1,2 +1,2 @@
 pubsub
--DCATKIN_DEVEL_PREFIX=/home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/install -G Unix Makefiles
