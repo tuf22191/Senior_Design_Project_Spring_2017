@@ -1,6 +1,6 @@
 
 
-
+# test3 has motion detection however it records a lot of objects with motion, we might want to average the number of frames
 
 
 #now the rgb values are working
@@ -136,6 +136,10 @@ try:
     		text = "Occupied"
 
         	cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"), (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
+
+        # print "HEYEHEYENHEYHEYHEY", len(cnts)
+        # print dir(cnts)
+        # print "HEYEHEYENHEYHEYHEY", cnts.__len__
 
         if viz:
             cv2.imshow("Security Feed", frame)

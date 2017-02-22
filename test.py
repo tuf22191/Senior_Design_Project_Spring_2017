@@ -81,7 +81,9 @@ print "Starting tracking"
 print "...press control-c to stop."
 try:
     while True:
+        print dir(c), "is the dir"
         zz =c.retrieve_buffer(im)
+
         img = np.array(zz) # these are coming in as crazy bayered things--and in grey
         #cv2.imshow('yellow',img)
         imm = img
