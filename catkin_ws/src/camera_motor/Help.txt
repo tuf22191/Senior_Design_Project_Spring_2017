@@ -1,0 +1,7 @@
+1. When adding a specific message type, you want to then check if that message type
+was correctly added:
+
+rosmsg package camera_motor
+
+
+2. 
