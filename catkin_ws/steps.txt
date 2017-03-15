@@ -1,0 +1,5 @@
+Commands are: 
+1. sudo su root
+2. . devel/setup.bash      (for letting rosrun discover the camera_motor package of ours - the bash file sets up enviornment)
+3. cd to catkin_ws if not already there
+4. rosrun camera_motor listener.py or talker.py     (the tab completion should be working - you might need to shells)

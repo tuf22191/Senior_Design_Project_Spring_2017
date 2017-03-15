@@ -1,0 +1,8 @@
+prefix=/home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/install
+
+Name: camera_motor
+Description: Description of camera_motor
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/install/lib 
+Requires: 

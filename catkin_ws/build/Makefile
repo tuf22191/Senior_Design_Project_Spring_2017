@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build
+CMAKE_BINARY_DIR = /home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,9 +120,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles /home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles /home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -250,7 +250,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pubsub/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make camera_motor/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -263,7 +263,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pubsub/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make camera_motor/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -276,7 +276,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f pubsub/CMakeFiles/roscpp_generate_messages_py.dir/build.make pubsub/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/roscpp_generate_messages_py.dir/build.make camera_motor/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -289,7 +289,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pubsub/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -302,7 +302,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pubsub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -315,7 +315,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f pubsub/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pubsub/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make camera_motor/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -328,7 +328,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pubsub/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make camera_motor/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -341,7 +341,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pubsub/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pubsub/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make camera_motor/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -354,7 +354,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f pubsub/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pubsub/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f camera_motor/CMakeFiles/std_msgs_generate_messages_py.dir/build.make camera_motor/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Help Target

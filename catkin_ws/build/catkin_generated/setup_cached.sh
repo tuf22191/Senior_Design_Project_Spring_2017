@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH="/home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD="/home/tuf22191/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build"
+export PWD="/home/camera/Desktop/Senior_Design_Project_Spring_2017/catkin_ws/build"
