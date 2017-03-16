@@ -1,6 +1,6 @@
 
 
-#test6 writes video files as well
+#test6 writes video files as well Still working on this feature! 
 
 
 #now the rgb values are working

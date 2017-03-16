@@ -1,6 +1,6 @@
 
 
-# test3 has motion detection however it records a lot of objects with motion, we might want to average the number of frames
+#test5 has the motion detection
 
 
 #now the rgb values are working
@@ -91,7 +91,8 @@ print "Starting tracking"
 print "...press control-c to stop."
 try:
     meters_per_pixel_ratio = None
-    BALLSIZE = .047 # 47mm diameter
+    #BALLSIZE = .047 # 47mm diameter
+    BALLSIZE= .14
     ratminx = None
     ratmaxx = None
     ratminy = None
@@ -102,7 +103,7 @@ try:
     horizontal_vel_ball = None
     deltay_mins = None #average the change in y_maxes with change in y_mins
     deltax_mins = None #average the change in x_maxes with change in x_mins
-    finito = -100000
+    finito = -4
 
     while True:
         zz =c.retrieve_buffer(im)
@@ -118,7 +119,7 @@ try:
         frame = img
         imm =img
         #added code here NOT OUR CODE! Took it from other person
-        frame = imutils.resize(frame, width=800, height=800)
+        frame = imutils.resize(frame, width=500) #height = 800
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
