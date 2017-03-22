@@ -1,0 +1,33 @@
+
+Number 1:
+x: 72 y: 556 xt: 112 yt: 626
+Avgx = 92
+Avgy = 591
+
+
+
+#2
+x: 181 y: 567 xt: 218 yt: 623 avgx: 199 avgy: 595
+#3
+x: 294 y: 564 xt: 329 yt: 627 avgx: 311 avgy: 595
+#4
+x: 392 y: 561 xt: 426 yt: 622 avgx: 411 avgy: 591  #added 2 to avgxx
+#5
+x: 502 y: 566 xt: 536 yt: 626 avgx: 519 avgy: 596
+#6
+x: 607 y: 559 xt: 640 yt: 623 avgx: 623 avgy: 591
+#7
+x: 711 y: 559 xt: 745 yt: 623 avgx: 728 avgy: 591
+#8
+x: 819 y: 546 xt: 854 yt: 617 avgx: 836 avgy: 581
+#9
+x: 924 y: 532 xt: 960 yt: 614 avgx: 942 avgy: 573
+#10
+x: 1028 y: 532 xt: 1064 yt: 610 avgx: 1046 avgy: 571
+#11
+x: 1125 y: 532 xt: 1160 yt: 609 avgx: 1142 avgy: 570
+
+height is :
+183.5
+hypotenuse:
+217.5
