@@ -17,7 +17,7 @@ import datetime
 import sys
 import imutils
 import argparse
-
+import json
 
 print "hellodfd"
 print "dfdfdfdfddfdfdf"
@@ -60,7 +60,10 @@ progress_interval = 10 # time between prints in seconds
 
 #other person's code
 firstFrame = None
+jammer = 0
+listOfData = []
 
+startTime =time.time()
 print "Starting tracking"
 print "...press control-c to stop."
 try:
@@ -110,11 +113,15 @@ try:
 
             print "x: %d y: %d xt: %d yt: %d avgx: %d avgy: %d\n" % (x,y, (x+w), (y+h), ((2*x+w)/2), ((2*y+h)/2))
 
+            #append the list of files to this
+
+            listOfData.append({'x': x, 'y':y, 'xt': (x+w) , 'yt': (y+h), 'avgx': ((2*x+w)/2) , 'avgy':((2*y+h)/2) }) #appending object to array
             text = "Occupied"
 
             cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"), (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
         print "end countours"
-
+        if(jammer ==1):
+            break;
         # print "HEYEHEYENHEYHEYHEY", len(cnts)
         # print dir(cnts)
         # print "HEYEHEYENHEYHEYHEY", cnts.__len__
@@ -137,6 +144,25 @@ try:
             logfname = 'arenatracker_%s.csv' % cur_dtime_str #modified this to do in the current file
             logf = open(logfname, 'w', 0) # 0 forces flush after each write call (buffer = 0)
             logf.write('framenum,UTCtime,fps,animx,animy,bbx,bby,bbw,bbh,bbtheta\n')
+        if(time.time()-startTime >= 40):
+            listOfData = [] #clear list
+            jammer = 1;
+
+    logf.close()
+    c.stop_capture()
+    c.disconnect()
+    if viz:
+        cv2.destroyAllWindows()
+    print '\nQuiting...'
+
+    if len(listOfData) != 0:
+        #sortedList = sort(listOfData)
+        with open('tapeConfig.json', 'w') as f:
+            json.dump(listOfData, f)
+        #open file
+        #print the data
+        #close file
+        print "Configuration success: please check tapeConfig.json"
 
 except KeyboardInterrupt:
     # close file
@@ -146,3 +172,12 @@ except KeyboardInterrupt:
     if viz:
         cv2.destroyAllWindows()
     print '\nQuiting...'
+
+    if len(listOfData) != 0:
+        #sortedList = sort(listOfData)
+        with open('tapeConfig.json', 'w') as f:
+            json.dump(listOfData, f)
+        #open file
+        #print the data
+        #close file
+        print "Configuration success: please check tapeConfig.json"
