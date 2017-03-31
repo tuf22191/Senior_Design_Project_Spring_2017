@@ -2,7 +2,12 @@
 2. get horizontal velocity to work
 
 Things implemented so far:
-3. you have 2 nodes talking to each other. 
+3. you have 2 nodes talking to each other.
 4. you have Kalman Filter working
 5. You have motion detection working
-6. You have other things working 
+6. You have other things working
+
+
+
+kill -9 [PID NUMBER]
+ % kill -9 %6891

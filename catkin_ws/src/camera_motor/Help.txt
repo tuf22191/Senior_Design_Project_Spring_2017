@@ -4,4 +4,25 @@ was correctly added:
 rosmsg package camera_motor
 
 
-2. 
+2.
+
+
+
+
+1. You have to put the tapeConfig file in the catkin_ws folder as in your most parent catkin workspace file
+
+2. whenever you add a new rospy file you need to chmod +x it and then catkin_make when in catkin_ws directory
+
+
+
+
+
+
+General Setup:
+
+    1. cd catkin_ws
+    2. . devel/setup.bash    (you might need to do sudo)
+    3. catkin_make           (if you are adding to the code)
+    4. python [nameOfTapeConfigurationFile].py   (place the tape)
+    5. Take the generated file and make sure it is under .../catkin_ws/ directory
+    6.

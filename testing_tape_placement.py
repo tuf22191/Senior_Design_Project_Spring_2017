@@ -19,13 +19,18 @@ import imutils
 import argparse
 import json
 
+
+def getKey(tapeNumber):
+    return tapeNumber['avgx']
+
+
 print "hellodfd"
 print "dfdfdfdfddfdfdf"
 # set up various things
 colorMax = np.array([10, 10, 10],np.uint8) # 3 color channels
 colorMin = np.array([250, 250, 250],np.uint8) # must be >= all values in colorThreshMin
 dilate_kernel = np.ones((5,5), np.uint8)
-threshVal = 20 #CHANGE THIS TO ADJUST LIGHTING CUT-OFFS
+threshVal = 10 #CHANGE THIS TO ADJUST LIGHTING CUT-OFFS
 # to run program: press "up" arrow so it says "python ....."
 frInd = 0
 viz = True
@@ -93,8 +98,8 @@ try:
             # compute the absolute difference between the current frame and
         # first frame
         frameDelta = cv2.absdiff(firstFrame, gray)
-        thresh = cv2.threshold(frameDelta, 25, 255, cv2.THRESH_BINARY)[1]
-
+        thresh = cv2.threshold(frameDelta, 25, 255, cv2.THRESH_TOZERO)[1]
+        #thresh = cv2.adaptiveThreshold(thresh,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY,11,2)
         # dilate the thresholded image to fill in holes, then find contours
         # on thresholded image
         thresh = cv2.dilate(thresh, None, iterations=2)
@@ -144,7 +149,7 @@ try:
             logfname = 'arenatracker_%s.csv' % cur_dtime_str #modified this to do in the current file
             logf = open(logfname, 'w', 0) # 0 forces flush after each write call (buffer = 0)
             logf.write('framenum,UTCtime,fps,animx,animy,bbx,bby,bbw,bbh,bbtheta\n')
-        if(time.time()-startTime >= 40):
+        if(time.time()-startTime >= 180): # 40 seconds
             listOfData = [] #clear list
             jammer = 1;
 
@@ -157,8 +162,9 @@ try:
 
     if len(listOfData) != 0:
         #sortedList = sort(listOfData)
+        sortedList_=sorted(listOfData,key = getKey)
         with open('tapeConfig.json', 'w') as f:
-            json.dump(listOfData, f)
+            json.dump(sortedList_, f)
         #open file
         #print the data
         #close file
@@ -174,10 +180,17 @@ except KeyboardInterrupt:
     print '\nQuiting...'
 
     if len(listOfData) != 0:
+        sortedList_=sorted(listOfData,key = getKey)
         #sortedList = sort(listOfData)
         with open('tapeConfig.json', 'w') as f:
-            json.dump(listOfData, f)
+            json.dump(sortedList_, f)
         #open file
         #print the data
         #close file
+
+
+
+
+
+
         print "Configuration success: please check tapeConfig.json"
